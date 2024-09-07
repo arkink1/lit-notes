@@ -1,0 +1,24 @@
+{% extends "main/layout.html" %}
+
+{% block title %}Literature Notes{% endblock %}
+
+{% block body %}
+    <div id="pageContent">
+        {% if type == "character" %}
+            <h1 class="infoHeading">{{ thing.prose.name }} - {{ thing.character }}</h1>
+            <p>{{ thing.content|safe }}</p>
+        
+        {% elif type == "theme" %}
+            <h1 class="infoHeading">{{ thing.prose.name }} - {{ thing.theme }}</h1>
+            <p>{{ thing.content|safe }}</p>
+        
+        {% else %}
+            <h1 class="infoHeading">{{ thing.prose.name }} - {{ thing.chapter }}</h1>
+            <p>{{ thing.content|safe }}</p>
+        
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

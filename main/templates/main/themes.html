@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}Literature Notes{% endblock %}
+
+{% block body %}
+    <div id="pageContent">
+        <h1 id="heading">{{ theme.theme }}</h1>
+        <p>{{ theme.content|safe }}</p>
+    </div>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

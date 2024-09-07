@@ -1,0 +1,63 @@
+{% extends "main/layout.html" %}
+
+{% block title %}Literature Notes{% endblock %}
+
+{% block body %}
+<div id="landing">
+    <div id="landingContent">
+        <h1 id="landingTitle">LitNotes</h1>
+        <p id="landingText">
+            This is a site designed by students to help students with IGCSE English Literature. Here, you can find resources for plays, poetry and proses.
+        </p>
+    </div>
+    <div class="accordion" id="accordionExample" style="width: 75vw;">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Plays
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    {% for i in plays %}
+                        <a href="plays/{{ i.id }}"><button class="btn btn-dark">{{ i.name }}</button></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Poetry
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    {% for i in poems %}
+                        <a href="poetry/{{ i.id }}"><button class="btn btn-dark">{{ i.name }}</button></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Proses
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    {% for i in proses %}
+                        <a href="proses/{{ i.id }}"><button class="btn btn-dark">{{ i.name }}</button></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

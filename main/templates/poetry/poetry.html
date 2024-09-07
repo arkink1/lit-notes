@@ -1,0 +1,23 @@
+{% extends "main/layout.html" %}
+
+{% block title %}Literature Notes{% endblock %}
+
+{% block body %}
+<div id="landing">
+    <div id="landingContent">
+        <h1 id="landingTitle" class="textTitle">{{ title.name }}</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="width: 75vw;">
+        <div id="poetryButtonGroup">
+            <a href="{{ title.id }}/themes"><button class="btn btn-dark poetryButtons">Themes</button></a>
+            <a href="{{ title.id }}/analysis"><button class="btn btn-dark poetryButtons">Analysis</button></a>
+            <a href="{{ title.id }}/context"><button class="btn btn-dark poetryButtons">Context</button></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "main/layout.html" %}
+
+{% block title %}Literature Notes{% endblock %}
+
+{% block body %}
+    <div id="pageContent">
+        {% if type == "theme" %}
+            <h1 class="infoHeading">{{ title.name }} - Themes</h1>
+            {% for i in thing %}
+                <p>{{ i.content|safe }}</p>
+            {% endfor %}
+        
+        {% elif type == "analysis" %}
+            <h1 class="infoHeading">{{ title.name }} - Analysis</h1>
+            {% for i in thing %}
+                <p>{{ i.content|safe }}</p>
+            {% endfor %}
+        
+        {% else %}
+            <h1 class="infoHeading">{{ title.name }} - Context</h1>
+            {% for i in thing %}
+                <p>{{ i.content|safe }}</p>
+            {% endfor %}
+        
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+html, * {
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+nav {
+    background-color: #111;
+}
+
+#landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 25%;
+
+    position: static;
+    size: auto;
+
+    background: white;
+}
+
+#landingContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    position: static;
+    size: auto;
+
+    font-family: DM Sans;
+}
+
+#landingTitle {
+    position: static;
+    width: max-content;
+    
+    font-weight: bold;
+    font-size: 8vw;
+    letter-spacing: -0.075em;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #111;
+}
+
+#landingText {
+    position: static;
+    width: 72vw;
+    
+    font-weight: normal;
+    font-size: 1.75vw;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    padding: 1vw;
+    
+    color: #111;
+}
+
+#landingButtonGroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    left: 50%;
+
+    position: static;
+    width: 56vw;
+}
+
+.landingButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: static;
+    width: 16vw;
+    height: 4vw;
+
+    background: #111;
+    border-radius: 1vw; 
+    border: none;
+}
+
+#landingButtonGroup button {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2vw;
+
+    color: white;
+}
+
+button:focus { 
+    outline: none; 
+}
+
+footer {
+    background-color: #111;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.card {
+    border-radius: 2vw;
+}
+
+.card-body {
+    font-size: 1vw;
+}
+
+.card-header {
+    background-color: #111;
+    text-align: center;
+}
+
+.accordion {
+    margin-top: 1vw;
+}
+
+.accordion-button:focus {
+    z-index: 3;
+    border-color: #111;
+    box-shadow: white;
+}
+
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: #111;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-body button {
+    margin-bottom: 0.25vh;
+    background-color: #111;
+}
+
+.btn-dark, .bg-dark {
+    background-color: #111;
+}
+
+#pageContent {
+    padding: 1vw;
+}
+
+.infoHeading {
+    letter-spacing: -0.075em;
+}
+
+.poetryButtons {
+    font-size: 2vw;
+    margin-bottom: 1vw;
+    width: 24vw;
+    height: 4vw;
+    padding: 0.25vw;
+}
+
+.textTitle {
+    width: max-content;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        overflow-y: hidden; /* Hide vertical scrollbar */
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+
+    #poetryButtonGroup {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #landingTitle {
+        font-size: 12vw;
+    }
+    
+    #landingText {
+        font-size: 4vw;
+    }
+
+    #landingButtonGroup {
+        width: 80vw;
+    }
+
+    .landingButton {
+        width: 24vw;
+        height: 8vw;
+    }
+
+    #landingButtonGroup button {
+        font-size: 4vw;
+    }
+
+    .accordion-body button, .poetryButtons {
+        width: -webkit-fill-available;
+    }
+
+    .poetryButtonGroup {
+        display: none;
+    }
+
+    footer {
+        font-size: 80%;
+    }
+}
